@@ -43,10 +43,10 @@
           <select name="vehicleMake" class="form-control" ng-model="vehicleMake">
             <option value="">Select</option>
             <optgroup label="Common Makes">
-              <option ng-repeat="manufacturer in manufacturers | filter: {isCommon: true}" value="{{manufacturer.name}}">{{manufacturer.name}}</option>
+              <option ng-repeat="manufacturer in manufacturers | filter: {isCommon: true}" value="{{manufacturer.name | uppercase}}">{{manufacturer.name}}</option>
             </optgroup>
             <optgroup label="All Makes">
-              <option ng-repeat="manufacturer in manufacturers" value="{{manufacturer.name}}">{{manufacturer.name}}</option>
+              <option ng-repeat="manufacturer in manufacturers" value="{{manufacturer.name | uppercase}}">{{manufacturer.name}}</option>
             </optgroup>
           </select>
         </div>
