@@ -14,4 +14,10 @@ angular.module('aamiApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.dateOptions = {
+      dateFormat: 'dd/mm/yy',
+      minDate: 0,
+      maxDate: 45
+    };
   });
