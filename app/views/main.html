@@ -1,23 +1,80 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<div class="row">
+  <form class="form-horizontal" action="index.html" method="post" role="form">
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    <div>
+      <h4>Select your type of car insurance</h4>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+      <div class="form-group">
+        <label class="radio-inline">
+          <input id="productType1" name="productType" type="radio" value="COMPREHENSIVE">Comprehensive
+        </label>
+        <label class="radio-inline">
+          <input id="productType12" name="productType" type="radio" value="THIRD_PARTY">Third Party Property Damage
+        </label>
+      </div>
+    </div>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+    <div>
+      <h4>Policy start date</h4>
+      <p>
+        To give you the most accurate price tell us the date you want your cover to start. Your policy start date must be before 6th August 2015.
+      </p>
+
+      <div class="form-group">
+        <input id="policyStartDatePicker" name="policyStartDate" type="text" value="" class="form-control" placeholder="DD/MM/YYYY" style="width: auto">
+      </div>
+    </div>
+
+    <div>
+      <h3>Find your car using the search below</h3>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label" for="vehicleYearOfManufacture">Year of manufacture</label>
+        <div class="col-sm-8">
+          <select name="vehicleYearOfManufacture" class="form-control"></select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label" for="vehicleMake">Car make</label>
+        <div class="col-sm-8">
+          <select name="vehicleMake" class="form-control"></select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label" for="vehicleModel">Car model</label>
+        <div class="col-sm-8">
+          <select name="vehicleModel" class="form-control"></select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label" for="vehicleTransmissionType">Transmission type</label>
+        <div class="col-sm-8">
+          <select name="vehicleTransmissionType" class="form-control"></select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label" for="vehicleNumberOfCylinders">Number of cylinders</label>
+        <div class="col-sm-8">
+          <select name="vehicleNumberOfCylinders" class="form-control"></select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-4 control-label" for="vehicleBodyType">Body type</label>
+        <div class="col-sm-8">
+          <select name="vehicleBodyType" class="form-control"></select>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success pull-right">Find your car</button>
+  </form>
+
+  <br>
+  <br>
+
 </div>
