@@ -1,5 +1,7 @@
 # aami
 
+[![Build Status](https://travis-ci.org/killercentury/sc-test.svg?branch=master)](https://travis-ci.org/killercentury/sc-test)
+
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.11.1.
 
