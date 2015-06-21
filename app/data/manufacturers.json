@@ -1,0 +1,163 @@
+[{
+  "name": "Abarth",
+  "isCommon": false
+}, {
+  "name": "Alfa Romeo",
+  "isCommon": false
+}, {
+  "name": "Aston Martin",
+  "isCommon": false
+}, {
+  "name": "Audi",
+  "isCommon": true
+}, {
+  "name": "Bentley",
+  "isCommon": false
+}, {
+  "name": "BMW",
+  "isCommon": true
+}, {
+  "name": "Chery",
+  "isCommon": false
+}, {
+  "name": "Chrysler",
+  "isCommon": false
+}, {
+  "name": "Citroen",
+  "isCommon": false
+}, {
+  "name": "Dodge",
+  "isCommon": false
+}, {
+  "name": "Fiat",
+  "isCommon": false
+}, {
+  "name": "Ford",
+  "isCommon": true
+}, {
+  "name": "Foton",
+  "isCommon": false
+}, {
+  "name": "Geely",
+  "isCommon": false
+}, {
+  "name": "Great Wall",
+  "isCommon": false
+}, {
+  "name": "Holden",
+  "isCommon": true
+}, {
+  "name": "Honda",
+  "isCommon": true
+}, {
+  "name": "HSV",
+  "isCommon": false
+}, {
+  "name": "Hyundai",
+  "isCommon": true
+}, {
+  "name": "Infiniti",
+  "isCommon": false
+}, {
+  "name": "Isuzu",
+  "isCommon": false
+}, {
+  "name": "Iveco",
+  "isCommon": false
+}, {
+  "name": "Jaguar",
+  "isCommon": false
+}, {
+  "name": "Jeep",
+  "isCommon": false
+}, {
+  "name": "Jmc",
+  "isCommon": false
+}, {
+  "name": "Kia",
+  "isCommon": true
+}, {
+  "name": "Land Rover",
+  "isCommon": false
+}, {
+  "name": "Ldv",
+  "isCommon": false
+}, {
+  "name": "Lexus",
+  "isCommon": false
+}, {
+  "name": "Lotus",
+  "isCommon": false
+}, {
+  "name": "M.G.",
+  "isCommon": false
+}, {
+  "name": "Mahindra",
+  "isCommon": false
+}, {
+  "name": "Mazda",
+  "isCommon": true
+}, {
+  "name": "Mercedes-Benz",
+  "isCommon": true
+}, {
+  "name": "Mercedes-Maybach",
+  "isCommon": false
+}, {
+  "name": "Mini",
+  "isCommon": false
+}, {
+  "name": "Mitsubishi",
+  "isCommon": true
+}, {
+  "name": "Nissan",
+  "isCommon": true
+}, {
+  "name": "Peugeot",
+  "isCommon": false
+}, {
+  "name": "Porsche",
+  "isCommon": false
+}, {
+  "name": "Proton",
+  "isCommon": false
+}, {
+  "name": "Range Rover",
+  "isCommon": false
+}, {
+  "name": "Renault",
+  "isCommon": false
+}, {
+  "name": "Skoda",
+  "isCommon": false
+}, {
+  "name": "Smart",
+  "isCommon": false
+}, {
+  "name": "Ssangyong",
+  "isCommon": false
+}, {
+  "name": "Subaru",
+  "isCommon": true
+}, {
+  "name": "Suzuki",
+  "isCommon": false
+}, {
+  "name": "Tata",
+  "isCommon": false
+}, {
+  "name": "Tesla",
+  "isCommon": false
+}, {
+  "name": "Toyota",
+  "isCommon": true
+}, {
+  "name": "Volkswagen",
+  "isCommon": true
+}, {
+  "name": "Volvo",
+  "isCommon": false
+}, {
+  "name": "Zx Auto",
+  "isCommon": false
+}]

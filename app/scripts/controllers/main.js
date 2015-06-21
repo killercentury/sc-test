@@ -25,4 +25,9 @@ angular.module('aamiApp')
       $scope.yearsOfManufacture = data;
     });
 
+    $http.get('data/manufacturers.json').success(function (data) {
+      console.log(data);
+      $scope.manufacturers = data;
+    });
+
   });

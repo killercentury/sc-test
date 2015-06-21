@@ -40,7 +40,15 @@
       <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleMake">Car make</label>
         <div class="col-sm-8">
-          <select name="vehicleMake" class="form-control"></select>
+          <select name="vehicleMake" class="form-control" ng-model="vehicleMake">
+            <option value="">Select</option>
+            <optgroup label="Common Makes">
+              <option ng-repeat="manufacturer in manufacturers | filter: {isCommon: true}" value="{{manufacturer.name}}">{{manufacturer.name}}</option>
+            </optgroup>
+            <optgroup label="All Makes">
+              <option ng-repeat="manufacturer in manufacturers" value="{{manufacturer.name}}">{{manufacturer.name}}</option>
+            </optgroup>
+          </select>
         </div>
       </div>
 
