@@ -1,113 +1,49 @@
 [{
   "manufacturer": "Audi",
   "name": "A1",
-  "transmissionTypes": ["Auto", "Manual"]
+  "transmissionTypes": ["auto", "manual"],
+  "bodyTypes": {
+    "auto": ["5D Hatchback"],
+    "manual": ["5D Hatchback"]
+  }
 }, {
   "manufacturer": "Audi",
   "name": "A3",
-  "transmissionTypes": ["Auto"]
+  "transmissionTypes": ["auto"],
+  "bodyTypes": {
+    "auto": ["2D Cabriolet", "4D Sedan", "5D Hatchback"]
+  }
 }, {
   "manufacturer": "Audi",
   "name": "A4",
-  "transmissionTypes": ["Auto", "Manual", "Other"]
-}, {
-  "manufacturer": "Audi",
-  "name": "A5",
-  "transmissionTypes": ["Auto", "Manual", "Other"]
-}, {
-  "manufacturer": "Audi",
-  "name": "A6",
-  "transmissionTypes": ["Auto", "Other"]
-}, {
-  "manufacturer": "Audi",
-  "name": "A7",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "A8",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Q3",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Q5",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Q7",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "R8",
-  "transmissionTypes": ["Auto", "Manual"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Rs Q3",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Rs4",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Rs5",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Rs6",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Rs7",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "S1",
-  "transmissionTypes": ["Manual"]
-}, {
-  "manufacturer": "Audi",
-  "name": "S3",
-  "transmissionTypes": ["Auto", "Manual"]
-}, {
-  "manufacturer": "Audi",
-  "name": "S4",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "S5",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "S6",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "S7",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "S8",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Sq5",
-  "transmissionTypes": ["Auto"]
-}, {
-  "manufacturer": "Audi",
-  "name": "Tt",
-  "transmissionTypes": ["Auto", "Manual", "Other"]
+  "transmissionTypes": ["auto", "manual", "other"],
+  "bodyTypes": {
+    "auto": ["4D Sedan", "4D Wagon"],
+    "manual": ["4D Sedan"],
+    "other": ["4D Sedan"]
+  }
 }, {
   "manufacturer": "BMW",
   "name": "1",
-  "transmissionTypes": ["Auto", "Manual"]
+  "transmissionTypes": ["auto", "manual"],
+  "bodyTypes": {
+    "auto": ["5D Hatchback"],
+    "manual": ["5D Hatchback"]
+  }
 }, {
   "manufacturer": "BMW",
   "name": "116i",
-  "transmissionTypes": ["Auto", "Manual"]
+  "transmissionTypes": ["auto", "manual"],
+  "bodyTypes": {
+    "auto": ["5D Hatchback"],
+    "manual": ["5D Hatchback"]
+  }
 }, {
   "manufacturer": "BMW",
   "name": "118d",
-  "transmissionTypes": ["Auto", "Manual"]
+  "transmissionTypes": ["auto", "manual"],
+  "bodyTypes": {
+    "auto": ["2D Convertible", "5D Hatchback"],
+    "manual": ["2D Convertible", "5D Hatchback"]
+  }
 }]

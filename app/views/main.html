@@ -80,7 +80,9 @@
       <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleBodyType">Body type</label>
         <div class="col-sm-8">
-          <select name="vehicleBodyType" class="form-control"></select>
+          <select name="vehicleBodyType" class="form-control" ng-model="vehicleBodyType" ng-options="bodyType for bodyType in vehicleModel.bodyTypes[vehicleTransmissionType]">
+            <option value="">Select</option>
+          </select>
         </div>
       </div>
     </div>
