@@ -26,8 +26,11 @@ angular.module('aamiApp')
     });
 
     $http.get('data/manufacturers.json').success(function (data) {
-      console.log(data);
       $scope.manufacturers = data;
+    });
+
+    $http.get('data/models.json').success(function (data) {
+      $scope.models = data;
     });
 
   });
