@@ -1,82 +1,113 @@
 [{
   "manufacturer": "Audi",
-  "name": "A1"
+  "name": "A1",
+  "transmissionTypes": ["Auto", "Manual"]
 }, {
   "manufacturer": "Audi",
-  "name": "A3"
+  "name": "A3",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "A4"
+  "name": "A4",
+  "transmissionTypes": ["Auto", "Manual", "Other"]
 }, {
   "manufacturer": "Audi",
-  "name": "A5"
+  "name": "A5",
+  "transmissionTypes": ["Auto", "Manual", "Other"]
 }, {
   "manufacturer": "Audi",
-  "name": "A6"
+  "name": "A6",
+  "transmissionTypes": ["Auto", "Other"]
 }, {
   "manufacturer": "Audi",
-  "name": "A7"
+  "name": "A7",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "A8"
+  "name": "A8",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "Q3"
+  "name": "Q3",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "Q5"
+  "name": "Q5",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "Q7"
+  "name": "Q7",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "R8"
+  "name": "R8",
+  "transmissionTypes": ["Auto", "Manual"]
 }, {
   "manufacturer": "Audi",
-  "name": "Rs Q3"
+  "name": "Rs Q3",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "Rs4"
+  "name": "Rs4",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "Rs5"
+  "name": "Rs5",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "Rs6"
+  "name": "Rs6",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "Rs7"
+  "name": "Rs7",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "S1"
+  "name": "S1",
+  "transmissionTypes": ["Manual"]
 }, {
   "manufacturer": "Audi",
-  "name": "S3"
+  "name": "S3",
+  "transmissionTypes": ["Auto", "Manual"]
 }, {
   "manufacturer": "Audi",
-  "name": "S4"
+  "name": "S4",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "S5"
+  "name": "S5",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "S6"
+  "name": "S6",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "S7"
+  "name": "S7",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "S8"
+  "name": "S8",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "Sq5"
+  "name": "Sq5",
+  "transmissionTypes": ["Auto"]
 }, {
   "manufacturer": "Audi",
-  "name": "Tt"
+  "name": "Tt",
+  "transmissionTypes": ["Auto", "Manual", "Other"]
 }, {
   "manufacturer": "BMW",
-  "name": "1"
+  "name": "1",
+  "transmissionTypes": ["Auto", "Manual"]
 }, {
   "manufacturer": "BMW",
-  "name": "116i"
+  "name": "116i",
+  "transmissionTypes": ["Auto", "Manual"]
+}, {
+  "manufacturer": "BMW",
+  "name": "118d",
+  "transmissionTypes": ["Auto", "Manual"]
 }]

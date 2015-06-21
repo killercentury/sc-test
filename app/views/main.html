@@ -64,7 +64,9 @@
       <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleTransmissionType">Transmission type</label>
         <div class="col-sm-8">
-          <select name="vehicleTransmissionType" class="form-control"></select>
+          <select name="vehicleTransmissionType" class="form-control" ng-model="vehicleTransmissionType" ng-options="transmissionType for transmissionType in vehicleModel.transmissionTypes">
+            <option value="">Select</option>
+          </select>
         </div>
       </div>
 
