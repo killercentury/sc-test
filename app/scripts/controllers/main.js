@@ -8,7 +8,7 @@
  * Controller of the aamiApp
  */
 angular.module('aamiApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $http) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -20,4 +20,9 @@ angular.module('aamiApp')
       minDate: 0,
       maxDate: 45
     };
+
+    $http.get('data/years.json').success(function (data) {
+      $scope.yearsOfManufacture = data;
+    });
+
   });

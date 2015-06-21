@@ -31,7 +31,9 @@
       <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleYearOfManufacture">Year of manufacture</label>
         <div class="col-sm-8">
-          <select name="vehicleYearOfManufacture" class="form-control"></select>
+          <select name="vehicleYearOfManufacture" class="form-control" ng-model="vehicleYearOfManufacture" ng-options="year.label for year in yearsOfManufacture">
+            <option value="">Select</option>
+          </select>
         </div>
       </div>
 
