@@ -395,7 +395,10 @@ module.exports = function(grunt) {
         keepAlive: false,
         noColor: false
       },
-      run: {}
+      run: {},
+      ci: {
+        configFile: "test/protractor.ci.conf.js"
+      }
     }
   });
 
@@ -428,6 +431,16 @@ module.exports = function(grunt) {
     'connect:test',
     'karma',
     'protractor:run'
+  ]);
+
+  grunt.registerTask('ci', [
+    'clean:server',
+    'wiredep',
+    'concurrent:test',
+    'autoprefixer',
+    'connect:test',
+    'karma',
+    'protractor:ci'
   ]);
 
   grunt.registerTask('build', [
