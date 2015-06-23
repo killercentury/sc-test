@@ -63,14 +63,15 @@
     <div>
       <h3>Find your car using the search below</h3>
 
-      <div class="form-group">
+      <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleYearOfManufacture.$invalid && findCarForm.vehicleYearOfManufacture.$touched}">
         <label class="col-sm-4 control-label" for="vehicleYearOfManufacture">Year of manufacture</label>
         <div class="col-sm-8">
-          <select name="vehicleYearOfManufacture" class="form-control" ng-model="vehicleYearOfManufacture" ng-options="year.label for year in yearsOfManufacture">
+          <select name="vehicleYearOfManufacture" class="form-control" ng-model="vehicleYearOfManufacture" ng-options="year.label for year in yearsOfManufacture" required>
             <option value="">Select</option>
           </select>
         </div>
       </div>
+      <div id="manufacture-year-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleYearOfManufacture.$invalid && findCarForm.vehicleYearOfManufacture.$touched">Please select a policy start date from the calendar.</div>
 
       <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleMake">Car make</label>
