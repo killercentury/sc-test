@@ -26,6 +26,7 @@ angular.module('aamiApp')
       form.vehicleYearOfManufacture.$setTouched();
       form.vehicleMake.$setTouched();
       form.vehicleModel.$setTouched();
+      form.vehicleTransmissionType.$setTouched();
     };
 
     $http.get('data/years.json').success(function(data) {

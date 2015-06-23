@@ -99,14 +99,15 @@
       </div>
       <div id="car-model-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleModel.$invalid && findCarForm.vehicleModel.$touched">Please select the car model.</div>
 
-      <div class="form-group">
+      <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleTransmissionType.$invalid && findCarForm.vehicleTransmissionType.$touched}">
         <label class="col-sm-4 control-label" for="vehicleTransmissionType">Transmission type</label>
         <div class="col-sm-8">
-          <select name="vehicleTransmissionType" class="form-control" ng-model="vehicleTransmissionType" ng-options="transmissionType for transmissionType in vehicleModel.transmissionTypes" ng-disabled="!vehicleModel">
+          <select name="vehicleTransmissionType" class="form-control" ng-model="vehicleTransmissionType" ng-options="transmissionType for transmissionType in vehicleModel.transmissionTypes" ng-disabled="!vehicleModel" required>
             <option value="">Select</option>
           </select>
         </div>
       </div>
+      <div id="transmission-type-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleTransmissionType.$invalid && findCarForm.vehicleTransmissionType.$touched">Please select the car model.</div>
 
       <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleNumberOfCylinders">Number of cylinders</label>
