@@ -51,11 +51,12 @@
         To give you the most accurate price tell us the date you want your cover to start. Your policy start date must be before 6th August 2015.
       </p>
 
-      <div class="form-group">
+      <div class="form-group has-feedback" ng-class="{ 'has-error' : findCarForm.policyStartDate.$invalid && findCarForm.policyStartDate.$dirty}">
         <div class="col-sm-4">
-          <input id="policyStartDatePicker" name="policyStartDate" type="text" value="" class="form-control" placeholder="DD/MM/YYYY" style="width: auto" ui-date="dateOptions" ng-model="policyStartDate">
+          <input id="policyStartDatePicker" name="policyStartDate" type="text" value="" class="form-control" placeholder="DD/MM/YYYY" style="width: auto" ui-date="dateOptions" ng-model="policyStartDate" required>
         </div>
       </div>
+      <div id="policy-start-date-error" class="alert alert-danger" ng-show="findCarForm.policyStartDate.$invalid && findCarForm.policyStartDate.$dirty">Please select a policy start date from the calendar.</div>
     </div>
     <hr>
 
