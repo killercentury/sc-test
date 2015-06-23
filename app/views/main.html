@@ -52,8 +52,9 @@
       </p>
 
       <div class="form-group has-feedback" ng-class="{ 'has-error' : findCarForm.policyStartDate.$invalid && findCarForm.policyStartDate.$dirty}">
-        <div class="col-sm-4">
-          <input id="policyStartDatePicker" name="policyStartDate" type="text" value="" class="form-control" placeholder="DD/MM/YYYY" style="width: auto" ui-date="dateOptions" ng-model="policyStartDate" required>
+        <div class="col-sm-3">
+          <input id="policyStartDatePicker" name="policyStartDate" type="text" value="" class="form-control" placeholder="DD/MM/YYYY" ui-date="dateOptions" ng-model="policyStartDate" required>
+          <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
         </div>
       </div>
       <div id="policy-start-date-error" class="alert alert-danger" ng-show="findCarForm.policyStartDate.$invalid && findCarForm.policyStartDate.$dirty">Please select a policy start date from the calendar.</div>
@@ -61,7 +62,7 @@
     <hr>
 
     <div>
-      <h3>Find your car using the search below</h3>
+      <h3><span class="glyphicon glyphicon-search" aria-hidden="true" style="margin-right: 8px"></span><span>Find your car using the search below</span></h3>
 
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleYearOfManufacture.$invalid && findCarForm.vehicleYearOfManufacture.$touched}">
         <label class="col-sm-4 control-label" for="vehicleYearOfManufacture">Year of manufacture</label>
