@@ -28,7 +28,7 @@
   <form name="findCarForm" class="form-horizontal" role="form" novalidate ng-submit="submit(findCarForm)" accessible-form>
 
     <div>
-      <h4>Select your type of car insurance</h4>
+      <h4><span>Select your type of car insurance</span><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Type of insurance" data-content="Comprehensive Insurance covers you for damage to your own car as well as for damage your car may cause to the property of others. Please check the PDS for full details." style="margin-left: 8px" popover></span></h4>
       <div class="form-group has-feedback" ng-class="{ 'has-error' : findCarForm.productType.$invalid && findCarForm.$dirty }">
         <div class="radio col-sm-4">
           <label>
@@ -46,7 +46,7 @@
     <hr>
 
     <div>
-      <h4>Policy start date</h4>
+      <h4><span>Policy start date</span><span class="glyphicon glyphicon-question-sign" style="margin-left: 8px" popover></span></h4>
       <p>
         To give you the most accurate price tell us the date you want your cover to start. Your policy start date must be before 6th August 2015.
       </p>
