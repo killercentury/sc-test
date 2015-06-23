@@ -24,6 +24,7 @@ angular.module('aamiApp')
     $scope.submit = function(form) {
       form.$setDirty();
       form.vehicleYearOfManufacture.$setTouched();
+      form.vehicleMake.$setTouched();
     };
 
     $http.get('data/years.json').success(function(data) {
