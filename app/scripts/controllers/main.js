@@ -21,6 +21,10 @@ angular.module('aamiApp')
       maxDate: 45
     };
 
+    $scope.submit = function(form) {
+      form.$setDirty();
+    };
+
     $http.get('data/years.json').success(function(data) {
       $scope.yearsOfManufacture = data;
     });

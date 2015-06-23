@@ -18,23 +18,23 @@
   </div>
   <br>
 
-  <form class="form-horizontal" action="index.html" method="post" role="form" novalidate>
+  <form name="findCarForm" class="form-horizontal" role="form" novalidate ng-submit="submit(findCarForm)" accessible-form>
 
     <div>
       <h4>Select your type of car insurance</h4>
-
-      <div class="form-group">
+      <div class="form-group has-feedback" ng-class="{ 'has-error' : findCarForm.productType.$invalid && findCarForm.$dirty }">
         <div class="radio col-sm-4">
           <label>
-            <input id="productType1" name="productType" type="radio" value="COMPREHENSIVE" ng-model="productType">Comprehensive
+            <input id="productType1" name="productType" type="radio" value="COMPREHENSIVE" ng-model="productType" required>Comprehensive
           </label>
         </div>
         <div class="radio col-sm-4">
           <label>
-            <input id="productType12" name="productType" type="radio" value="THIRD_PARTY" ng-model="productType">Third Party Property Damage
+            <input id="productType12" name="productType" type="radio" value="THIRD_PARTY" ng-model="productType" required>Third Party Property Damage
           </label>
         </div>
       </div>
+      <div id="product-type-error" class="alert alert-danger" ng-show="findCarForm.productType.$invalid && findCarForm.$dirty">Please select one insurance type above.</div>
     </div>
     <hr>
 
