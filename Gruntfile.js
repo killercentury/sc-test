@@ -391,13 +391,13 @@ module.exports = function(grunt) {
     // E2E test settings
     protractor: {
       options: {
-        configFile: "test/protractor.conf.js",
+        configFile: 'test/protractor.conf.js',
         keepAlive: false,
         noColor: false
       },
       run: {},
       ci: {
-        configFile: "test/protractor.ci.conf.js"
+        configFile: 'test/protractor.ci.conf.js'
       }
     }
   });
