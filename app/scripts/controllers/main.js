@@ -23,6 +23,8 @@ angular.module('aamiApp')
 
     $scope.submit = function(form) {
       form.$setDirty();
+      form.productType.$setDirty();
+      form.policyStartDate.$setDirty();
       form.vehicleYearOfManufacture.$setTouched();
       form.vehicleMake.$setTouched();
       form.vehicleModel.$setTouched();

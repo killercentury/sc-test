@@ -20,7 +20,7 @@ describe('find your car', function() {
   it('should see all error messages if only click the submit button', function() {
     element(by.id('btn-find-car')).click();
     expect(element(by.id('product-type-error')).getText()).toEqual('Please select one insurance type above.');
-    //expect(element(by.id('policy-start-date-error')).getText()).toEqual('Please select a policy start date from the calendar.');
+    expect(element(by.id('policy-start-date-error')).getText()).toEqual('Please select a policy start date from the calendar.');
     expect(element(by.id('manufacture-year-error')).getText()).toEqual('Please select the year of manufacture.');
     expect(element(by.id('car-make-error')).getText()).toEqual('Please select the car make.');
     expect(element(by.id('car-model-error')).getText()).toEqual('Please select the car model.');
