@@ -15,8 +15,12 @@ angular.module('aamiApp')
       'Karma'
     ];
 
-    $scope.showCarSearchButton = true;
-    $scope.showCarSearchResults = false;
+    var activateSearchForm = function() {
+      $scope.showCarSearchButton = true;
+      $scope.showCarSearchResults = false;
+    };
+
+    activateSearchForm();
 
     $scope.dateOptions = {
       defaultDate: 0,
@@ -49,6 +53,7 @@ angular.module('aamiApp')
 
     // update available manufacturers based on selected manufacture year
     $scope.$watch('vehicleYearOfManufacture', function(newValue) {
+      activateSearchForm();
       if (angular.isNumber(newValue) && newValue > 1975) {
         $scope.manufacturers = manufacturersService.query({
           year: newValue
@@ -60,6 +65,7 @@ angular.module('aamiApp')
 
     // update available car models based on selected manufacture year and manufacturer
     $scope.$watch('vehicleMake', function(newValue) {
+      activateSearchForm();
       if (angular.isString(newValue)) {
         $scope.carModels = carModelsService.query({
           year: $scope.vehicleYearOfManufacture,
@@ -71,16 +77,26 @@ angular.module('aamiApp')
     });
 
     $scope.$watch('vehicleModel ', function(newValue) {
+      activateSearchForm();
       if (angular.isUndefined(newValue)) {
         $scope.vehicleTransmissionType = undefined;
       }
     });
 
     $scope.$watch('vehicleTransmissionType ', function(newValue) {
+      activateSearchForm();
       if (angular.isUndefined(newValue)) {
         $scope.vehicleNumberOfCylinders = undefined;
         $scope.vehicleBodyType = undefined;
       }
+    });
+
+    $scope.$watch('vehicleNumberOfCylinders ', function() {
+      activateSearchForm();
+    });
+
+    $scope.$watch('vehicleBodyType ', function() {
+      activateSearchForm();
     });
 
   });

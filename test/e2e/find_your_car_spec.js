@@ -59,6 +59,20 @@ describe('find your car', function() {
     expect(element(by.model('vehicleMake')).isEnabled()).toBe(false);
   });
 
+  it('should see search results disappear and search form re-activated if a select box change', function() {
+    element(by.id('productType1')).click();
+    element(by.cssContainingText('option', '2015')).click();
+    element.all(by.cssContainingText('option', 'Audi')).first().click();
+    element(by.cssContainingText('option', 'A1')).click();
+    element(by.cssContainingText('option', 'auto')).click();
+    element(by.id('btn-find-car')).click();
+    expect(element(by.id('btn-find-car')).isDisplayed()).toBe(false);
+    expect(element(by.id('car-search-results-section')).isDisplayed()).toBe(true);
+    element(by.cssContainingText('option', 'manual')).click();
+    expect(element(by.id('btn-find-car')).isDisplayed()).toBe(true);
+    expect(element(by.id('car-search-results-section')).isDisplayed()).toBe(false);
+  });
+
   it('should see popover once click the question sign', function() {
 
     expect(element(by.cssContainingText('.popover-title', 'Type of insurance')).isPresent()).toBe(false);
