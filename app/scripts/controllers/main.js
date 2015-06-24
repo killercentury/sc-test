@@ -8,7 +8,7 @@
  * Controller of the aamiApp
  */
 angular.module('aamiApp')
-  .controller('MainCtrl', function($scope, $http, manufactureYearsService, manufacturersService, carModelsService) {
+  .controller('MainCtrl', function($scope, manufactureYearsService, manufacturersService, carModelsService) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -27,6 +27,8 @@ angular.module('aamiApp')
       form.vehicleMake.$setTouched();
       form.vehicleModel.$setTouched();
       form.vehicleTransmissionType.$setTouched();
+      form.vehicleNumberOfCylinders.$setTouched();
+      form.vehicleBodyType.$setTouched();
     };
 
     // initialize available manufacture years
