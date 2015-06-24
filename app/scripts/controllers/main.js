@@ -9,11 +9,6 @@
  */
 angular.module('aamiApp')
   .controller('MainCtrl', function($scope, manufactureYearsService, manufacturersService, carModelsService) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
 
     var activateSearchForm = function() {
       $scope.showCarSearchButton = true;
