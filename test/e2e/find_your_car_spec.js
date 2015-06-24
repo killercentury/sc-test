@@ -14,7 +14,7 @@ describe('find your car', function() {
     element(by.id('policyStartDatePicker')).sendKeys(formattedDate);
     expect(element(by.model('policyStartDate')).getAttribute('value')).toEqual(formattedDate);
     element(by.cssContainingText('option', '2015')).click();
-    expect(element(by.cssContainingText('option', '2015')).isSelected()).toEqual(true);
+    expect(element(by.cssContainingText('option', '2015')).isSelected()).toBe(true);
   });
 
   it('should see all error messages if only click the submit button', function() {
@@ -30,12 +30,18 @@ describe('find your car', function() {
   });
 
   it('should see depedent select boxes disabled', function() {
-    expect(element(by.model('vehicleYearOfManufacture')).isEnabled()).toEqual(true);
-    expect(element(by.model('vehicleMake')).isEnabled()).toEqual(false);
-    expect(element(by.model('vehicleModel')).isEnabled()).toEqual(false);
-    expect(element(by.model('vehicleTransmissionType')).isEnabled()).toEqual(false);
-    expect(element(by.model('vehicleNumberOfCylinders')).isEnabled()).toEqual(false);
-    expect(element(by.model('vehicleBodyType')).isEnabled()).toEqual(false);
+    expect(element(by.model('vehicleYearOfManufacture')).isEnabled()).toBe(true);
+    expect(element(by.model('vehicleMake')).isEnabled()).toBe(false);
+    expect(element(by.model('vehicleModel')).isEnabled()).toBe(false);
+    expect(element(by.model('vehicleTransmissionType')).isEnabled()).toBe(false);
+    expect(element(by.model('vehicleNumberOfCylinders')).isEnabled()).toBe(false);
+    expect(element(by.model('vehicleBodyType')).isEnabled()).toBe(false);
+  });
+
+  it('should see popover once click the question sign', function() {
+    expect(element(by.cssContainingText('.popover-title', 'Type of insurance')).isPresent()).toBe(false);
+    element(by.id('popover-product-type')).click();
+    expect(element(by.cssContainingText('.popover-title', 'Type of insurance')).isDisplayed()).toBe(true);
   });
 
 });
