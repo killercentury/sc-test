@@ -160,11 +160,8 @@
       <h4>Please select your car:</h4>
     </div>
 
-    <div class="list-group">
-      <a href="#" class="list-group-item">Car 1</a>
-      <a href="#" class="list-group-item">Car 2</a>
-      <a href="#" class="list-group-item">Car 3</a>
-      <a href="#" class="list-group-item">Car 4</a>
+    <div class="list-group" ng-repeat="car in carSearchResults">
+      <a class="list-group-item">{{car.name}}</a>
     </div>
   </div>
   <br>

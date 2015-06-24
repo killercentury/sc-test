@@ -8,7 +8,7 @@
  * Controller of the aamiApp
  */
 angular.module('aamiApp')
-  .controller('MainCtrl', function($scope, manufactureYearsService, manufacturersService, carModelsService) {
+  .controller('MainCtrl', function($scope, manufactureYearsService, manufacturersService, carModelsService, carSearchService) {
 
     var activateSearchForm = function() {
       $scope.showCarSearchButton = true;
@@ -40,6 +40,14 @@ angular.module('aamiApp')
       if (form.$valid) {
         $scope.showCarSearchButton = false;
         $scope.showCarSearchResults = true;
+        $scope.carSearchResults = carSearchService.query({
+          year: $scope.vehicleYearOfManufacture,
+          manufacturer: $scope.vehicleMake,
+          model: $scope.vehicleModel,
+          transmissionType: $scope.vehicleTransmissionType,
+          cylinderType: $scope.vehicleNumberOfCylinders,
+          bodyType: $scope.vehicleBodyType
+        });
       }
     };
 
