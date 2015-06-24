@@ -8,7 +8,7 @@
  * Controller of the aamiApp
  */
 angular.module('aamiApp')
-  .controller('MainCtrl', function($scope, $http, manufactureYearsService, manufacturersService) {
+  .controller('MainCtrl', function($scope, $http, manufactureYearsService, manufacturersService, carModelsService) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -33,7 +33,7 @@ angular.module('aamiApp')
     $scope.manufactureYears = manufactureYearsService.query();
 
     // update available manufacturers based on selected manufacture year
-    $scope.$watch('vehicleYearOfManufacture', function(newValue, oldValue) {
+    $scope.$watch('vehicleYearOfManufacture', function(newValue) {
       if (angular.isNumber(newValue) && newValue > 1975) {
         $scope.manufacturers = manufacturersService.query({
           year: newValue
@@ -41,8 +41,14 @@ angular.module('aamiApp')
       }
     });
 
-    $http.get('data/models.json').success(function(data) {
-      $scope.models = data;
+    // update available car models based on selected manufacture year and manufacturer
+    $scope.$watch('vehicleMake', function(newValue) {
+      if (angular.isString(newValue)) {
+        $scope.carModels = carModelsService.query({
+          year: $scope.vehicleYearOfManufacture,
+          manufacturer: newValue
+        });
+      }
     });
 
   });
