@@ -19,12 +19,15 @@ describe('find your car', function() {
     expect(element(by.cssContainingText('option', 'A1')).isSelected()).toBe(true);
     element(by.cssContainingText('option', 'auto')).click();
     expect(element(by.cssContainingText('option', 'auto')).isSelected()).toBe(true);
+    element(by.id('btn-find-car')).click();
     expect(element(by.id('product-type-error')).isDisplayed()).toBe(false);
     expect(element(by.id('policy-start-date-error')).isDisplayed()).toBe(false);
     expect(element(by.id('manufacture-year-error')).isDisplayed()).toBe(false);
     expect(element(by.id('car-make-error')).isDisplayed()).toBe(false);
     expect(element(by.id('car-model-error')).isDisplayed()).toBe(false);
     expect(element(by.id('transmission-type-error')).isDisplayed()).toBe(false);
+    expect(element(by.id('btn-find-car')).isDisplayed()).toBe(false);
+    expect(element(by.id('car-search-results-section')).isDisplayed()).toBe(true);
   });
 
   it('should see all error messages if only click the submit button', function() {

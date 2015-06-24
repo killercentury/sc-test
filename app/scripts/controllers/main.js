@@ -15,6 +15,9 @@ angular.module('aamiApp')
       'Karma'
     ];
 
+    $scope.showCarSearchButton = true;
+    $scope.showCarSearchResults = false;
+
     $scope.dateOptions = {
       defaultDate: 0,
       dateFormat: 'dd/mm/yy',
@@ -34,6 +37,11 @@ angular.module('aamiApp')
       form.vehicleTransmissionType.$setTouched();
       form.vehicleNumberOfCylinders.$setTouched();
       form.vehicleBodyType.$setTouched();
+
+      if (form.$valid) {
+        $scope.showCarSearchButton = false;
+        $scope.showCarSearchResults = true;
+      }
     };
 
     // initialize available manufacture years

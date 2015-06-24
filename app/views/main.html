@@ -148,13 +148,25 @@
       </div>
     </div>
 
-    <div class="text-center">
+    <div class="text-center" ng-show="showCarSearchButton">
       <button id="btn-find-car" type="submit" class="btn btn-danger btn-lg">Find your car</button>
     </div>
 
   </form>
-
   <br>
+
+  <div id="car-search-results-section" class="panel panel-danger" ng-show="showCarSearchResults">
+    <div class="panel-heading">
+      <h4>Please select your car:</h4>
+    </div>
+
+    <div class="list-group">
+      <a href="#" class="list-group-item">Car 1</a>
+      <a href="#" class="list-group-item">Car 2</a>
+      <a href="#" class="list-group-item">Car 3</a>
+      <a href="#" class="list-group-item">Car 4</a>
+    </div>
+  </div>
   <br>
 
 </div>
