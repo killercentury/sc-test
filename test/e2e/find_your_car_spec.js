@@ -1,18 +1,23 @@
 'use strict';
 
 describe('find your car', function() {
-  it('should find the car', function() {
+
+  beforeEach(function() {
     browser.get('/');
+  });
+
+  it('should find the car', function() {
     element(by.id('productType1')).click();
     expect(element(by.model('productType')).getAttribute('value')).toEqual('COMPREHENSIVE');
     var date = new Date();
     var formattedDate = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
     element(by.id('policyStartDatePicker')).sendKeys(formattedDate);
     expect(element(by.model('policyStartDate')).getAttribute('value')).toEqual(formattedDate);
+    element(by.cssContainingText('option', '2015')).click();
+    expect(element(by.cssContainingText('option', '2015')).isSelected()).toEqual(true);
   });
 
   it('should see all error messages if only click the submit button', function() {
-    browser.get('/');
     element(by.id('btn-find-car')).click();
     expect(element(by.id('product-type-error')).getText()).toEqual('Please select one insurance type above.');
     //expect(element(by.id('policy-start-date-error')).getText()).toEqual('Please select a policy start date from the calendar.');
@@ -23,4 +28,14 @@ describe('find your car', function() {
     expect(element(by.id('cylinder-type-error')).getText()).toEqual('Please select the number of cylinders.');
     expect(element(by.id('body-type-error')).getText()).toEqual('Please select the body type.');
   });
+
+  it('should see depedent select boxes disabled', function() {
+    expect(element(by.model('vehicleYearOfManufacture')).isEnabled()).toEqual(true);
+    expect(element(by.model('vehicleMake')).isEnabled()).toEqual(false);
+    expect(element(by.model('vehicleModel')).isEnabled()).toEqual(false);
+    expect(element(by.model('vehicleTransmissionType')).isEnabled()).toEqual(false);
+    expect(element(by.model('vehicleNumberOfCylinders')).isEnabled()).toEqual(false);
+    expect(element(by.model('vehicleBodyType')).isEnabled()).toEqual(false);
+  });
+
 });
