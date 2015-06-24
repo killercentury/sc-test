@@ -8,7 +8,7 @@
  * Controller of the aamiApp
  */
 angular.module('aamiApp')
-  .controller('MainCtrl', function($scope, $http, manufactureYearOptionsService, manufacturersService) {
+  .controller('MainCtrl', function($scope, $http, manufactureYearsService, manufacturersService) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -29,9 +29,17 @@ angular.module('aamiApp')
       form.vehicleTransmissionType.$setTouched();
     };
 
-    $scope.manufactureYearOptions = manufactureYearOptionsService.query();
+    // initialize available manufacture years
+    $scope.manufactureYears = manufactureYearsService.query();
 
-    $scope.manufacturers = manufacturersService.query();
+    // update available manufacturers based on selected manufacture year
+    $scope.$watch('vehicleYearOfManufacture', function(newValue, oldValue) {
+      if (angular.isNumber(newValue) && newValue > 1975) {
+        $scope.manufacturers = manufacturersService.query({
+          year: newValue
+        });
+      }
+    });
 
     $http.get('data/models.json').success(function(data) {
       $scope.models = data;

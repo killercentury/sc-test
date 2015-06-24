@@ -1,4 +1,5 @@
 [{
+  "year": 2015,
   "manufacturer": "Audi",
   "name": "A1",
   "transmissionTypes": ["auto", "manual"],
@@ -7,6 +8,7 @@
     "manual": ["5D Hatchback"]
   }
 }, {
+  "year": 2015,
   "manufacturer": "Audi",
   "name": "A3",
   "transmissionTypes": ["auto"],
@@ -14,6 +16,7 @@
     "auto": ["2D Cabriolet", "4D Sedan", "5D Hatchback"]
   }
 }, {
+  "year": 2015,
   "manufacturer": "Audi",
   "name": "A4",
   "transmissionTypes": ["auto", "manual", "other"],
@@ -23,6 +26,7 @@
     "other": ["4D Sedan"]
   }
 }, {
+  "year": 2015,
   "manufacturer": "BMW",
   "name": "1",
   "transmissionTypes": ["auto", "manual"],
@@ -31,6 +35,7 @@
     "manual": ["5D Hatchback"]
   }
 }, {
+  "year": 2015,
   "manufacturer": "BMW",
   "name": "116i",
   "transmissionTypes": ["auto", "manual"],
@@ -39,6 +44,7 @@
     "manual": ["5D Hatchback"]
   }
 }, {
+  "year": 2015,
   "manufacturer": "BMW",
   "name": "118d",
   "transmissionTypes": ["auto", "manual"],
