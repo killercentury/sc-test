@@ -93,7 +93,7 @@
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleModel.$invalid && findCarForm.vehicleModel.$touched}">
         <label class="col-sm-4 control-label" for="vehicleModel">Car model</label>
         <div class="col-sm-8">
-          <select name="vehicleModel" class="form-control" ng-model="vehicleModel" ng-options="model.name for model in models | filter: {manufacturer: vehicleMake}" ng-disabled="!vehicleMake" required>
+          <select name="vehicleModel" class="form-control" ng-model="vehicleModel" ng-options="carModel.name for carModel in carModels | filter: {year: vehicleYearOfManufacture, manufacturer: vehicleMake}" ng-disabled="!vehicleMake" required>
             <option value="">Select</option>
           </select>
         </div>
