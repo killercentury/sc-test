@@ -8,7 +8,7 @@
  * Controller of the aamiApp
  */
 angular.module('aamiApp')
-  .controller('MainCtrl', function($scope, $http) {
+  .controller('MainCtrl', function($scope, $http, manufactureYearOptionsService) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -29,9 +29,7 @@ angular.module('aamiApp')
       form.vehicleTransmissionType.$setTouched();
     };
 
-    $http.get('data/years.json').success(function(data) {
-      $scope.yearsOfManufacture = data;
-    });
+    $scope.manufactureYearOptions = manufactureYearOptionsService.query();
 
     $http.get('data/manufacturers.json').success(function(data) {
       $scope.manufacturers = data;

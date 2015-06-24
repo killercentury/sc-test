@@ -67,7 +67,7 @@
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleYearOfManufacture.$invalid && findCarForm.vehicleYearOfManufacture.$touched}">
         <label class="col-sm-4 control-label" for="vehicleYearOfManufacture">Year of manufacture</label>
         <div class="col-sm-8">
-          <select name="vehicleYearOfManufacture" class="form-control" ng-model="vehicleYearOfManufacture" ng-options="year.label for year in yearsOfManufacture" required>
+          <select name="vehicleYearOfManufacture" class="form-control" ng-model="vehicleYearOfManufacture" ng-options="year.label for year in manufactureYearOptions" required>
             <option value="">Select</option>
           </select>
         </div>
