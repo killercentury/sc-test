@@ -39,9 +39,55 @@ describe('find your car', function() {
   });
 
   it('should see popover once click the question sign', function() {
+
     expect(element(by.cssContainingText('.popover-title', 'Type of insurance')).isPresent()).toBe(false);
     element(by.id('popover-product-type')).click();
+    browser.wait(function() {
+      return browser.isElementPresent(by.cssContainingText('.popover-title', 'Type of insurance'));
+    }, 5000);
     expect(element(by.cssContainingText('.popover-title', 'Type of insurance')).isDisplayed()).toBe(true);
+
+    expect(element(by.cssContainingText('.popover-title', 'Year of manufacture')).isPresent()).toBe(false);
+    element(by.id('popover-manufacture-year')).click();
+    browser.wait(function() {
+      return browser.isElementPresent(by.cssContainingText('.popover-title', 'Year of manufacture'));
+    }, 5000);
+    expect(element(by.cssContainingText('.popover-title', 'Year of manufacture')).isDisplayed()).toBe(true);
+
+    expect(element(by.cssContainingText('.popover-title', 'Car make')).isPresent()).toBe(false);
+    element(by.id('popover-car-make')).click();
+    browser.wait(function() {
+      return browser.isElementPresent(by.cssContainingText('.popover-title', 'Car make'));
+    }, 5000);
+    expect(element(by.cssContainingText('.popover-title', 'Car make')).isDisplayed()).toBe(true);
+
+    expect(element(by.cssContainingText('.popover-title', 'Car model')).isPresent()).toBe(false);
+    element(by.id('popover-car-model')).click();
+    browser.wait(function() {
+      return browser.isElementPresent(by.cssContainingText('.popover-title', 'Car model'));
+    }, 5000);
+    expect(element(by.cssContainingText('.popover-title', 'Car model')).isDisplayed()).toBe(true);
+
+    expect(element(by.cssContainingText('.popover-title', 'Transmission type')).isPresent()).toBe(false);
+    element(by.id('popover-transmission-type')).click();
+    browser.wait(function() {
+      return browser.isElementPresent(by.cssContainingText('.popover-title', 'Transmission type'));
+    }, 5000);
+    expect(element(by.cssContainingText('.popover-title', 'Transmission type')).isDisplayed()).toBe(true);
+
+    expect(element(by.cssContainingText('.popover-title', 'Number of cylinders')).isPresent()).toBe(false);
+    element(by.id('popover-cylinder-type')).click();
+    browser.wait(function() {
+      return browser.isElementPresent(by.cssContainingText('.popover-title', 'Number of cylinders'));
+    }, 5000);
+    expect(element(by.cssContainingText('.popover-title', 'Number of cylinders')).isDisplayed()).toBe(true);
+
+    expect(element(by.cssContainingText('.popover-title', 'Body type')).isPresent()).toBe(false);
+    element(by.id('popover-body-type')).click();
+    browser.wait(function() {
+      return browser.isElementPresent(by.cssContainingText('.popover-title', 'Body type'));
+    }, 5000);
+    expect(element(by.cssContainingText('.popover-title', 'Body type')).isDisplayed()).toBe(true);
   });
 
 });

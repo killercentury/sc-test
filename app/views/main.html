@@ -73,7 +73,7 @@
             <option value="">Select</option>
           </select>
         </div>
-        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Year of manufacture" data-content="<p>The year your car was manufactured, usually found on the car registration label or registration papers.</p><p>If your car was manufactured before 1976 please call us on <a class='text-danger'>13 22 44</a>.</p>"
+        <div class="col-sm-2"><span id="popover-manufacture-year" class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Year of manufacture" data-content="<p>The year your car was manufactured, usually found on the car registration label or registration papers.</p><p>If your car was manufactured before 1976 please call us on <a class='text-danger'>13 22 44</a>.</p>"
           popover></span>
         </div>
       </div>
@@ -92,7 +92,7 @@
             </optgroup>
           </select>
         </div>
-        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Car make" data-content="<p>The manufacturer of your car, e.g. Ford, Holden, Toyota.</p><p>Please call us on <a class='text-danger'>13 22 44</a> if your car make is not listed.</p>"
+        <div class="col-sm-2"><span id="popover-car-make" class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Car make" data-content="<p>The manufacturer of your car, e.g. Ford, Holden, Toyota.</p><p>Please call us on <a class='text-danger'>13 22 44</a> if your car make is not listed.</p>"
           popover></span>
         </div>
       </div>
@@ -105,7 +105,7 @@
             <option value="">Select</option>
           </select>
         </div>
-        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Car model" data-content="<p>The name given to a particular range of car within a make (e.g. Holden <strong>Commodore</strong>, Toyota <strong>Corolla</strong>).</p><p>So we can quote the correct premium, it is important that you properly identify your car model. If you are in any doubt please call us on <a class='text-danger'>13 22 44</a>.</p>"
+        <div class="col-sm-2"><span id="popover-car-model" class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Car model" data-content="<p>The name given to a particular range of car within a make (e.g. Holden <strong>Commodore</strong>, Toyota <strong>Corolla</strong>).</p><p>So we can quote the correct premium, it is important that you properly identify your car model. If you are in any doubt please call us on <a class='text-danger'>13 22 44</a>.</p>"
           popover></span>
         </div>
       </div>
@@ -118,7 +118,7 @@
             <option value="">Select</option>
           </select>
         </div>
-        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Transmission type" data-content="If you aren't sure or have a tiptronic then choose auto." popover></span>
+        <div class="col-sm-2"><span id="popover-transmission-type" class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Transmission type" data-content="If you aren't sure or have a tiptronic then choose auto." popover></span>
         </div>
       </div>
       <div id="transmission-type-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleTransmissionType.$invalid && findCarForm.vehicleTransmissionType.$touched">Please select the transmission type.</div>
@@ -130,7 +130,7 @@
             <option value="">Select</option>
           </select>
         </div>
-        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Number of cylinders" data-content="<p>The number of cylinders in your car's engine.</p><p>This information is not essential, but it assists in identifying your specific car.</p>"
+        <div class="col-sm-2"><span id="popover-cylinder-type" class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Number of cylinders" data-content="<p>The number of cylinders in your car's engine.</p><p>This information is not essential, but it assists in identifying your specific car.</p>"
           popover></span>
         </div>
       </div>
@@ -143,7 +143,7 @@
             <option value="">Select</option>
           </select>
         </div>
-        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Body type" data-content="<p>'Body type' refers to the shape/body of your car. For example, sedan, wagon or coupe.</p><p>This information is not essential, but it assists in identifying your specific car.</p>"
+        <div class="col-sm-2"><span id="popover-body-type" class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Body type" data-content="<p>'Body type' refers to the shape/body of your car. For example, sedan, wagon or coupe.</p><p>This information is not essential, but it assists in identifying your specific car.</p>"
           popover></span>
         </div>
       </div>
