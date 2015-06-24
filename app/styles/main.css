@@ -81,3 +81,7 @@ body {
     border-bottom: 0;
   }
 }
+
+#find-car-section .glyphicon-question-sign {
+  line-height: 34px;
+}

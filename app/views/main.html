@@ -27,7 +27,7 @@
 
   <form name="findCarForm" class="form-horizontal" role="form" novalidate ng-submit="submit(findCarForm)" accessible-form>
 
-    <div>
+    <div id="product-type-section">
       <div><span class="h4">Select your type of car insurance</span><span id="popover-product-type" class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Type of insurance" data-content="<p><strong>Comprehensive Insurance</strong> covers you for damage to your own car as well as for damage your car may cause to the property of others. Please check the <a>PDS</a> for full details.</p><p><strong>Third Party Property Damage Insurance</strong> covers you for damage your car may cause to another person’s property. Please check the <a>PDS</a> for full details.</p><p>Your AAMI Third Party Property Damage Insurance policy can be extended to include Fire and Theft cover for your car. This provides up to $10,000 cover for fire or theft damage. You can customise your quote later and add this benefit. For full details of this benefit, please see the <a>PDS</a>.</p>"
         style="margin-left: 8px" popover></span>
       </div>
@@ -47,7 +47,7 @@
     </div>
     <hr>
 
-    <div>
+    <div id="policy-start-date-section">
       <h4><span>Policy start date</span></h4>
       <p>
         To give you the most accurate price tell us the date you want your cover to start. Your policy start date must be before 6th August 2015.
@@ -63,7 +63,7 @@
     </div>
     <hr>
 
-    <div>
+    <div id="find-car-section">
       <h3><span class="glyphicon glyphicon-search" aria-hidden="true" style="margin-right: 8px"></span><span>Find your car using the search below</span></h3>
 
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleYearOfManufacture.$invalid && findCarForm.vehicleYearOfManufacture.$touched}">
