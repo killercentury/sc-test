@@ -53,6 +53,8 @@ angular.module('aamiApp')
         $scope.manufacturers = manufacturersService.query({
           year: newValue
         });
+      } else if (angular.isUndefined(newValue)) {
+        $scope.vehicleMake = undefined;
       }
     });
 
@@ -63,6 +65,21 @@ angular.module('aamiApp')
           year: $scope.vehicleYearOfManufacture,
           manufacturer: newValue
         });
+      } else if (angular.isUndefined(newValue)) {
+        $scope.vehicleModel = undefined;
+      }
+    });
+
+    $scope.$watch('vehicleModel ', function(newValue) {
+      if (angular.isUndefined(newValue)) {
+        $scope.vehicleTransmissionType = undefined;
+      }
+    });
+
+    $scope.$watch('vehicleTransmissionType ', function(newValue) {
+      if (angular.isUndefined(newValue)) {
+        $scope.vehicleNumberOfCylinders = undefined;
+        $scope.vehicleBodyType = undefined;
       }
     });
 

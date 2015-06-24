@@ -48,6 +48,17 @@ describe('find your car', function() {
     expect(element(by.model('vehicleBodyType')).isEnabled()).toBe(false);
   });
 
+  it('should see children select boxes being reset and disabled if a parent select box switchs back to empty selection', function() {
+    element(by.cssContainingText('option', '2015')).click();
+    expect(element(by.cssContainingText('option', '2015')).isSelected()).toBe(true);
+    element.all(by.cssContainingText('option', 'Audi')).first().click();
+    expect(element.all(by.cssContainingText('option', 'Audi')).first().isSelected()).toBe(true);
+    element(by.cssContainingText('#select-manufacture-year option', 'Select')).click();
+    expect(element(by.cssContainingText('option', '2015')).isSelected()).toBe(false);
+    expect(element.all(by.cssContainingText('option', 'Audi')).first().isSelected()).toBe(false);
+    expect(element(by.model('vehicleMake')).isEnabled()).toBe(false);
+  });
+
   it('should see popover once click the question sign', function() {
 
     expect(element(by.cssContainingText('.popover-title', 'Type of insurance')).isPresent()).toBe(false);

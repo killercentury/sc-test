@@ -69,7 +69,7 @@
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleYearOfManufacture.$invalid && findCarForm.vehicleYearOfManufacture.$touched }">
         <label class="col-sm-4 control-label" for="vehicleYearOfManufacture">Year of manufacture</label>
         <div class="col-sm-6">
-          <select name="vehicleYearOfManufacture" class="form-control" ng-model="vehicleYearOfManufacture" ng-options="year.value as year.label for year in manufactureYears" required>
+          <select name="vehicleYearOfManufacture" id="select-manufacture-year" class="form-control" ng-model="vehicleYearOfManufacture" ng-options="year.value as year.label for year in manufactureYears" required>
             <option value="">Select</option>
           </select>
         </div>
@@ -82,7 +82,7 @@
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleMake.$invalid && findCarForm.vehicleMake.$touched }">
         <label class="col-sm-4 control-label" for="vehicleMake">Car make</label>
         <div class="col-sm-6">
-          <select name="vehicleMake" class="form-control" ng-model="vehicleMake" ng-disabled="!vehicleYearOfManufacture" required>
+          <select name="vehicleMake" id="select-car-make" class="form-control" ng-model="vehicleMake" ng-disabled="!vehicleYearOfManufacture" required>
             <option value="">Select</option>
             <optgroup label="Common Makes">
               <option ng-repeat="manufacturer in manufacturers | filter: {isCommon: true}" value="{{manufacturer.name | uppercase}}">{{manufacturer.name}}</option>
@@ -101,7 +101,7 @@
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleModel.$invalid && findCarForm.vehicleModel.$touched }">
         <label class="col-sm-4 control-label" for="vehicleModel">Car model</label>
         <div class="col-sm-6">
-          <select name="vehicleModel" class="form-control" ng-model="vehicleModel" ng-options="carModel.name for carModel in carModels | filter: {year: vehicleYearOfManufacture, manufacturer: vehicleMake}" ng-disabled="!vehicleMake" required>
+          <select name="vehicleModel" id="select-car-model" class="form-control" ng-model="vehicleModel" ng-options="carModel.name for carModel in carModels | filter: {year: vehicleYearOfManufacture, manufacturer: vehicleMake}" ng-disabled="!vehicleMake" required>
             <option value="">Select</option>
           </select>
         </div>
@@ -114,7 +114,7 @@
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleTransmissionType.$invalid && findCarForm.vehicleTransmissionType.$touched }">
         <label class="col-sm-4 control-label" for="vehicleTransmissionType">Transmission type</label>
         <div class="col-sm-6">
-          <select name="vehicleTransmissionType" class="form-control" ng-model="vehicleTransmissionType" ng-options="transmissionType for transmissionType in vehicleModel.transmissionTypes" ng-disabled="!vehicleModel" required>
+          <select name="vehicleTransmissionType" id="select-transmission-type" class="form-control" ng-model="vehicleTransmissionType" ng-options="transmissionType for transmissionType in vehicleModel.transmissionTypes" ng-disabled="!vehicleModel" required>
             <option value="">Select</option>
           </select>
         </div>
@@ -126,7 +126,7 @@
       <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleNumberOfCylinders">Number of cylinders</label>
         <div class="col-sm-6">
-          <select name="vehicleNumberOfCylinders" class="form-control" ng-model="vehicleNumberOfCylinders" ng-options="cylinderType for cylinderType in vehicleModel.cylinderTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType">
+          <select name="vehicleNumberOfCylinders" id="select-cylinder-type" class="form-control" ng-model="vehicleNumberOfCylinders" ng-options="cylinderType for cylinderType in vehicleModel.cylinderTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType">
             <option value="">Select</option>
           </select>
         </div>
@@ -138,7 +138,7 @@
       <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleBodyType">Body type</label>
         <div class="col-sm-6">
-          <select name="vehicleBodyType" class="form-control" ng-model="vehicleBodyType" ng-options="bodyType for bodyType in vehicleModel.bodyTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType">
+          <select name="vehicleBodyType" id="select-body-type" class="form-control" ng-model="vehicleBodyType" ng-options="bodyType for bodyType in vehicleModel.bodyTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType">
             <option value="">Select</option>
           </select>
         </div>
