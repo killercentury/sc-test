@@ -13,6 +13,18 @@ describe('find your car', function() {
     expect(element(by.model('policyStartDate')).getAttribute('value')).toBeTruthy();
     element(by.cssContainingText('option', '2015')).click();
     expect(element(by.cssContainingText('option', '2015')).isSelected()).toBe(true);
+    element.all(by.cssContainingText('option', 'Audi')).first().click();
+    expect(element.all(by.cssContainingText('option', 'Audi')).first().isSelected()).toBe(true);
+    element(by.cssContainingText('option', 'A1')).click();
+    expect(element(by.cssContainingText('option', 'A1')).isSelected()).toBe(true);
+    element(by.cssContainingText('option', 'auto')).click();
+    expect(element(by.cssContainingText('option', 'auto')).isSelected()).toBe(true);
+    expect(element(by.id('product-type-error')).isDisplayed()).toBe(false);
+    expect(element(by.id('policy-start-date-error')).isDisplayed()).toBe(false);
+    expect(element(by.id('manufacture-year-error')).isDisplayed()).toBe(false);
+    expect(element(by.id('car-make-error')).isDisplayed()).toBe(false);
+    expect(element(by.id('car-model-error')).isDisplayed()).toBe(false);
+    expect(element(by.id('transmission-type-error')).isDisplayed()).toBe(false);
   });
 
   it('should see all error messages if only click the submit button', function() {
@@ -22,8 +34,6 @@ describe('find your car', function() {
     expect(element(by.id('car-make-error')).getText()).toEqual('Please select the car make.');
     expect(element(by.id('car-model-error')).getText()).toEqual('Please select the car model.');
     expect(element(by.id('transmission-type-error')).getText()).toEqual('Please select the transmission type.');
-    expect(element(by.id('cylinder-type-error')).getText()).toEqual('Please select the number of cylinders.');
-    expect(element(by.id('body-type-error')).getText()).toEqual('Please select the body type.');
   });
 
   it('should see depedent select boxes disabled', function() {

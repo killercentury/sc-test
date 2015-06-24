@@ -123,10 +123,10 @@
       </div>
       <div id="transmission-type-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleTransmissionType.$invalid && findCarForm.vehicleTransmissionType.$touched">Please select the transmission type.</div>
 
-      <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleNumberOfCylinders.$invalid && findCarForm.vehicleNumberOfCylinders.$touched }">
+      <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleNumberOfCylinders">Number of cylinders</label>
         <div class="col-sm-6">
-          <select name="vehicleNumberOfCylinders" class="form-control" ng-model="vehicleNumberOfCylinders" ng-options="cylinderType for cylinderType in vehicleModel.cylinderTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType" required>
+          <select name="vehicleNumberOfCylinders" class="form-control" ng-model="vehicleNumberOfCylinders" ng-options="cylinderType for cylinderType in vehicleModel.cylinderTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType">
             <option value="">Select</option>
           </select>
         </div>
@@ -134,12 +134,11 @@
           popover></span>
         </div>
       </div>
-      <div id="cylinder-type-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleNumberOfCylinders.$invalid && findCarForm.vehicleNumberOfCylinders.$touched">Please select the number of cylinders.</div>
 
-      <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleBodyType.$invalid && findCarForm.vehicleBodyType.$touched }">
+      <div class="form-group">
         <label class="col-sm-4 control-label" for="vehicleBodyType">Body type</label>
         <div class="col-sm-6">
-          <select name="vehicleBodyType" class="form-control" ng-model="vehicleBodyType" ng-options="bodyType for bodyType in vehicleModel.bodyTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType" required>
+          <select name="vehicleBodyType" class="form-control" ng-model="vehicleBodyType" ng-options="bodyType for bodyType in vehicleModel.bodyTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType">
             <option value="">Select</option>
           </select>
         </div>
@@ -147,7 +146,6 @@
           popover></span>
         </div>
       </div>
-      <div id="body-type-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleBodyType.$invalid && findCarForm.vehicleBodyType.$touched">Please select the body type.</div>
     </div>
 
     <div class="text-center">
