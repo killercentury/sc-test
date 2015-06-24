@@ -28,7 +28,9 @@
   <form name="findCarForm" class="form-horizontal" role="form" novalidate ng-submit="submit(findCarForm)" accessible-form>
 
     <div>
-      <h4><span>Select your type of car insurance</span><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Type of insurance" data-content="Comprehensive Insurance covers you for damage to your own car as well as for damage your car may cause to the property of others. Please check the PDS for full details." style="margin-left: 8px" popover></span></h4>
+      <div><span class="h4">Select your type of car insurance</span><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Type of insurance" data-content="<p><strong>Comprehensive Insurance</strong> covers you for damage to your own car as well as for damage your car may cause to the property of others. Please check the <a>PDS</a> for full details.</p><p><strong>Third Party Property Damage Insurance</strong> covers you for damage your car may cause to another person’s property. Please check the <a>PDS</a> for full details.</p><p>Your AAMI Third Party Property Damage Insurance policy can be extended to include Fire and Theft cover for your car. This provides up to $10,000 cover for fire or theft damage. You can customise your quote later and add this benefit. For full details of this benefit, please see the <a>PDS</a>.</p>"
+        style="margin-left: 8px" popover></span>
+      </div>
       <div class="form-group has-feedback" ng-class="{ 'has-error' : findCarForm.productType.$invalid && findCarForm.$dirty }">
         <div class="radio col-sm-4">
           <label>
@@ -46,7 +48,7 @@
     <hr>
 
     <div>
-      <h4><span>Policy start date</span><span class="glyphicon glyphicon-question-sign" style="margin-left: 8px" popover></span></h4>
+      <h4><span>Policy start date</span></h4>
       <p>
         To give you the most accurate price tell us the date you want your cover to start. Your policy start date must be before 6th August 2015.
       </p>
@@ -66,17 +68,20 @@
 
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleYearOfManufacture.$invalid && findCarForm.vehicleYearOfManufacture.$touched}">
         <label class="col-sm-4 control-label" for="vehicleYearOfManufacture">Year of manufacture</label>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <select name="vehicleYearOfManufacture" class="form-control" ng-model="vehicleYearOfManufacture" ng-options="year.value as year.label for year in manufactureYears" required>
             <option value="">Select</option>
           </select>
+        </div>
+        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Year of manufacture" data-content="<p>The year your car was manufactured, usually found on the car registration label or registration papers.</p><p>If your car was manufactured before 1976 please call us on <a class='text-danger'>13 22 44</a>.</p>"
+          popover></span>
         </div>
       </div>
       <div id="manufacture-year-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleYearOfManufacture.$invalid && findCarForm.vehicleYearOfManufacture.$touched">Please select the year of manufacture.</div>
 
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleMake.$invalid && findCarForm.vehicleMake.$touched}">
         <label class="col-sm-4 control-label" for="vehicleMake">Car make</label>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <select name="vehicleMake" class="form-control" ng-model="vehicleMake" ng-disabled="!vehicleYearOfManufacture" required>
             <option value="">Select</option>
             <optgroup label="Common Makes">
@@ -87,45 +92,59 @@
             </optgroup>
           </select>
         </div>
+        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Car make" data-content="<p>The manufacturer of your car, e.g. Ford, Holden, Toyota.</p><p>Please call us on <a class='text-danger'>13 22 44</a> if your car make is not listed.</p>"
+          popover></span>
+        </div>
       </div>
       <div id="car-make-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleMake.$invalid && findCarForm.vehicleMake.$touched">Please select the car make.</div>
 
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleModel.$invalid && findCarForm.vehicleModel.$touched}">
         <label class="col-sm-4 control-label" for="vehicleModel">Car model</label>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <select name="vehicleModel" class="form-control" ng-model="vehicleModel" ng-options="carModel.name for carModel in carModels | filter: {year: vehicleYearOfManufacture, manufacturer: vehicleMake}" ng-disabled="!vehicleMake" required>
             <option value="">Select</option>
           </select>
+        </div>
+        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Car model" data-content="<p>The name given to a particular range of car within a make (e.g. Holden <strong>Commodore</strong>, Toyota <strong>Corolla</strong>).</p><p>So we can quote the correct premium, it is important that you properly identify your car model. If you are in any doubt please call us on <a class='text-danger'>13 22 44</a>.</p>"
+          popover></span>
         </div>
       </div>
       <div id="car-model-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleModel.$invalid && findCarForm.vehicleModel.$touched">Please select the car model.</div>
 
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleTransmissionType.$invalid && findCarForm.vehicleTransmissionType.$touched}">
         <label class="col-sm-4 control-label" for="vehicleTransmissionType">Transmission type</label>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <select name="vehicleTransmissionType" class="form-control" ng-model="vehicleTransmissionType" ng-options="transmissionType for transmissionType in vehicleModel.transmissionTypes" ng-disabled="!vehicleModel" required>
             <option value="">Select</option>
           </select>
+        </div>
+        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Transmission type" data-content="If you aren't sure or have a tiptronic then choose auto." popover></span>
         </div>
       </div>
       <div id="transmission-type-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleTransmissionType.$invalid && findCarForm.vehicleTransmissionType.$touched">Please select the transmission type.</div>
 
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleNumberOfCylinders.$invalid && findCarForm.vehicleNumberOfCylinders.$touched}">
         <label class="col-sm-4 control-label" for="vehicleNumberOfCylinders">Number of cylinders</label>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <select name="vehicleNumberOfCylinders" class="form-control" ng-model="vehicleNumberOfCylinders" ng-options="cylinderType for cylinderType in vehicleModel.cylinderTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType" required>
             <option value="">Select</option>
           </select>
+        </div>
+        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Number of cylinders" data-content="<p>The number of cylinders in your car's engine.</p><p>This information is not essential, but it assists in identifying your specific car.</p>"
+          popover></span>
         </div>
       </div>
       <div id="cylinder-type-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleNumberOfCylinders.$invalid && findCarForm.vehicleTransmissionType.$touched">Please select the number of cylinders.</div>
 
       <div class="form-group" ng-class="{ 'has-error' : findCarForm.vehicleBodyType.$invalid && findCarForm.vehicleBodyType.$touched}">
         <label class="col-sm-4 control-label" for="vehicleBodyType">Body type</label>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <select name="vehicleBodyType" class="form-control" ng-model="vehicleBodyType" ng-options="bodyType for bodyType in vehicleModel.bodyTypes[vehicleTransmissionType]" ng-disabled="!vehicleTransmissionType" required>
             <option value="">Select</option>
           </select>
+        </div>
+        <div class="col-sm-2"><span class="glyphicon glyphicon-question-sign" data-toggle="popover" title="Body type" data-content="<p>'Body type' refers to the shape/body of your car. For example, sedan, wagon or coupe.</p><p>This information is not essential, but it assists in identifying your specific car.</p>"
+          popover></span>
         </div>
       </div>
       <div id="body-type-error" class="alert alert-danger text-center" ng-show="findCarForm.vehicleBodyType.$invalid && findCarForm.vehicleBodyType.$touched">Please select the body type.</div>
