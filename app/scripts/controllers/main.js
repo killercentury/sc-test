@@ -16,10 +16,13 @@ angular.module('aamiApp')
     ];
 
     $scope.dateOptions = {
+      defaultDate: 0,
       dateFormat: 'dd/mm/yy',
       minDate: 0,
       maxDate: 45
     };
+
+    $scope.policyStartDate = new Date();
 
     $scope.submit = function(form) {
       form.$setDirty();
